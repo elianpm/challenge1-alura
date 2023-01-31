@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(44, 44, 97);
+        }
+    </style>
+</head>
+<body>
+    <textarea id="textoObjetivo" cols="30" rows="10" placeholder="Escribe aqui"></textarea>
+    <button id="boton" onclick="funcion1()" >ENCRIPTAR</button>
+    <button id="desencriptar" onclick="funcion2()" >DESENCRIPTAR</button>
+
+    
+</body>
+
+<script>
+    function funcion2(){
+        var texto = document.getElementById('textoObjetivo');
+        var tVal = texto.value;
+        var cadenaRespuesta = "";
+        var i=0;
+        var temp="";
+        while(i < tVal.length){
+            switch (tVal[i]) {
+                case "a":
+                    if(tVal[i+1] == "i"){
+                        temp = "a";
+                        i += 2;
+                    }else{
+                        i++;
+                        temp = tVal[i];
+                    }
+                    break;
+                case "e":
+                    if( tVal[i+1]=="n" && tVal[i+2]=="t" && tVal[i+3]=="e" && tVal[i+4]=="r"){
+                        temp = "e";
+                        i += 5;
+                    }else{
+                        i++;
+                        temp = tVal[i];
+                    }
+                    break;
+                case "i":
+                    if(tVal[i+1]=="m" && tVal[i+2]=="e" && tVal[i+3]=="s"){
+                        temp = "i";
+                        i += 4;
+                    }else{
+                        i++;
+                        temp = tVal[i];
+                    }
+                    break;
+                case "o":
+                    if(tVal[i+1]=="b" && tVal[i+2]=="e" && tVal[i+3]=="r"){
+                        temp = "o";
+                        i += 4;
+                    }else{
+                        i++;
+                        temp = tVal[i];
+                    }
+                    break;
+                case "u":
+                    if(tVal[i+1]=="f" && tVal[i+2]=="a" && tVal[i+3]=="t"){
+                        temp = "u";
+                        i += 4;
+                    }else{
+                        i++;
+                        temp = tVal[i];
+                    }
+                    break;
+                default:
+                    temp = tVal[i];
+                    i++;
+                    break;
+            }
+            cadenaRespuesta += temp;
+        }
+        console.log(cadenaRespuesta);
+    }
+
+    function funcion1(){
+        var texto = document.getElementById('textoObjetivo');
+        var tVal = texto.value;
+        var cadena="";
+        var temp;
+        // console.log(textoValor[20] == 'a');
+        
+        for (let i = 0; i < tVal.length; i++) {
+            if ("a" == tVal[i]) {
+                temp = "ai";
+            }else if("e" == tVal[i]){
+                temp = "enter";
+            }else if("i" == tVal[i]){
+                temp = "imes";
+            }else if("o" == tVal[i]){
+                temp = "ober";
+            }else if("u" == tVal[i]){
+                temp = "ufat";
+            }else{
+                temp = tVal[i];
+            }
+            cadena += temp;
+        }
+        console.log(cadena);
+        
+
+    
+        
+        /*
+        La letra "a" es convertida para "ai"
+        La letra "e" es convertida para "enter"
+        La letra "i" es convertida para "imes"
+        La letra "o" es convertida para "ober"
+        La letra "u" es convertida para "ufat"
+        */
+        
+        
+
+
+
+
+
+    }
+
+</script>
+
+</html>
