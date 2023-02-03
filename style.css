@@ -123,10 +123,7 @@ body{
 /* RESPUESTA */
 .texto-respuesta{
     text-align: left;
-    height: 92%;
-    vertical-align: middle;
-    width: 100%;
-    font-style: normal;
+    height: 691px;
     font-weight: 400;
     font-size: 24px;
     line-height: 150%;
@@ -141,7 +138,12 @@ body{
     border-width: 1px;
 }
 
+#textoResultado{
+    display: none;
+}
 
-
+#sinTexto{
+    display: block;
+}
 
 

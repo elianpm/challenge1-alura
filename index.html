@@ -19,35 +19,41 @@
         <div class="caja-izquierda">
 
             <div class="texto-descifrar">
-                <textarea class="textbox" cols="100%" rows="100%" placeholder="Ingrese el texto aquí"></textarea>
+                <textarea id="textoObjetivo" class="textbox" cols="100%" rows="100%" placeholder="Ingrese el texto aquí"></textarea>
             </div>
 
             <div class="botones-descifrar">
-                <form>
-                    <div class="bloque-advertencia">
-                        <div class="icono">
-                            <img  src="svg/icon_admiracion.svg">
-                        </div>
-                        <p class="aclaracion">Solo letras minúsculas y sin acentos</p>
+                <div class="bloque-advertencia">
+                    <div class="icono">
+                        <img  src="svg/icon_admiracion.svg">
                     </div>
-                    <div class="bloque-botones">
-                        <button class="boton1" >Encriptar</button>
-                        <button class="boton2" >Desencriptar</button>
-                    </div>
-                </form>
+                    <p class="aclaracion">Solo letras minúsculas y sin acentos</p>
+                </div>
+                <div class="bloque-botones">
+                    <button class="boton1" id="encriptar" onclick="funcion1()">Encriptar</button>
+                    <button class="boton2" id="desencriptar" onclick="funcion2()">Desencriptar</button>
+                </div>
             </div>
 
         </div>
 
         <div class="caja-derecha">
             <div class="cuadro-respuesta">
-                <img class="imagen-derecha" src="svg/muneco.svg">
-                <p class="textBold">Ningun mensaje fue encontrado</p>
-                <p class="textoParrafo">Ingresa el texto que desees encriptar o desencriptar</p>
+                <div id="sinTexto">
+                    <img class="imagen-derecha" src="svg/muneco.svg">
+                    <p class="textBold">Ningun mensaje fue encontrado</p>
+                    <p class="textoParrafo">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+                <div  id="textoResultado">
+                    <!--Este texto se generara desde JS  -->
+                    <p class="texto-respuesta"></p> 
+                    <button class="boton-copiar" onclick="copiarTexto()">Copiar</button>
+                </div>
             </div>
 
         </div>
 
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
