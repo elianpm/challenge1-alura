@@ -5,6 +5,8 @@ function copiarTexto(){
     
     navigator.clipboard.writeText(input.textContent);
     button.textContent='Copiado';
+    // Devuelve el valor original de el boton Copiar
+    setTimeout(()=>button.textContent='Copiar',2000);
 }
 
 function respuesta(texto){
