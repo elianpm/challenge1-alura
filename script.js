@@ -1,6 +1,3 @@
-
-var copiar;
-
 function copiarTexto(){
     // https://www.youtube.com/watch?v=8tQQqVuUDjg
     const input = document.querySelector(".texto-respuesta");
@@ -8,8 +5,6 @@ function copiarTexto(){
     
     navigator.clipboard.writeText(input.textContent);
     button.textContent='Copiado';
-
-    // console.log(button,input);
 }
 
 function respuesta(texto){
@@ -53,9 +48,8 @@ function funcion1(){
         }
         cadena += temp;
     }
-    copiar = cadena;
     // console.log(cadena);
-    respuesta(copiar);
+    respuesta(cadena);
     textoResultado();
 }
 //DESENCRIPTAR
@@ -119,8 +113,7 @@ function funcion2(){
         }
         cadenaRespuesta += temp;
     }
-    copiar = cadenaRespuesta;
-    respuesta(copiar);
+    respuesta(cadenaRespuesta);
     textoResultado();
     // console.log(cadenaRespuesta);
 }
